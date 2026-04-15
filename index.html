@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backrooms Lore Wiki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">BACKROOMS<span>PROJECT</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('overview')">Overview</a></li>
+                    <li><a href="#" onclick="showSection('mechanics')">Math & Mechanics</a></li>
+                    <li><a href="#" onclick="showSection('levels')">The Levels</a></li>
+                    <li><a href="#" onclick="showSection('frontrooms')">Frontrooms Signs</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="overview" class="wiki-section">
+                <h1>Entity Nature: The Expansion</h1>
+                <p class="status-tag">Status: Classified</p>
+                <p>The Backrooms is a sentient entity that seeks to expand and absorb mass. It operates on a policy of curiosity rather than aggression, tempting individuals from the Frontrooms through strange occurrences (e.g., The Basement Slide).</p>
+                <div class="note">
+                    <strong>Note:</strong> The entity cannot attack the Frontrooms directly for reasons currently unknown.
+                </div>
+            </section>
+
+            <section id="mechanics" class="wiki-section" style="display:none;">
+                <h1>Mathematical Mechanics</h1>
+                <p>The rate of mental degradation is calculated by the deviation from an individual's "Average Luminosity" (D).</p>
+                <div class="formula-box">
+                    SD = L / (T + (2.4536 x D))
+                </div>
+                <ul>
+                    <li><strong>SD:</strong> Sanity Decrease</li>
+                    <li><strong>L:</strong> Luminosity of current environment</li>
+                    <li><strong>T:</strong> Time spent in current luminosity</li>
+                    <li><strong>D:</strong> Distance from average luminosity (user baseline)</li>
+                </ul>
+                <p>When <strong>SD</strong> reaches the <strong>SLL</strong> (Sanity Limit Low), absorption begins.</p>
+                <div class="absexplDIV">
+                    <h4>What <strong>is</strong> absorption?</h4>
+                    <p>Absorption happens when a person reaches their SLL(Sanity Limit Low). <strong>Not the same</strong> as subsorption(Reach SLH).</p>
+                    <p>When the process begins, the person starts to <strong>lose all memories and cognitive abilities</strong>, similar to having dementia.</p>
+                    <p>Shortly after that, they begin to dislike light and all sounds that aren't their own footsteps.</p>
+                    <p>Finally, the person completes their absorption with either:</p>
+                    <ul>
+                        <p>Becoming a dark blob roaming around level C.</p>
+                        <p>Becoming another silhouette in the frontrooms.</p>
+                    </ul>
+                    <h4>Can I save people in the process of absorption?</h4>
+                    <p>Short answer: <strong>Yes,</strong> but its really hard.</p>
+                    <p>To save someone from absorption, you'd need to put them in a really well-lit room, where stability is over ~78, give them almond water for around 50 Licles straight.</p>
+                </div>
+            </section>
+
+            <section id="levels" class="wiki-section" style="display:none;">
+                <h1>Catalogued Levels</h1>
+                <div class="card">
+                    <h3>Level 0.5: The Gilded Atrium</h3>
+                    <p>An infinite play-place. Plastic tubes and primary colors. No floor—only mesh netting. Falling results in noclipping to deeper layers.</p>
+                </div>
+                <div class="card" style="margin-top: 20px; border-color: #c0392b;">
+                    <h3>Level C: The Anonymous Cemetery</h3>
+                    <p><strong>Luminosity:</strong> Perpetual Maximum (Static Day)</p>
+                    <p>A silent field watched by the Groundskeeper. Contains millions of identical graves.</p>
+                    <blockquote style="font-style: italic; color: #aaa;">
+                        "Backrooms explorer, only recognised by god"
+                    </blockquote>
+                    <p><strong>Risk:</strong> Approaching graves may result in a "Hard Reset" to Level 0.5 or immediate Absorption.</p>
+                </div>
+            </section>
+
+            <section id="frontrooms" class="wiki-section" style="display:none;">
+                <h1>Frontrooms Manifestations</h1>
+                <p>The entity leaves "markers" or "lures" to attract potential mass.</p>
+                <ul>
+                    <li><strong>The Slide:</strong> A closed slide appearing in domestic basements.</li>
+                    <li><strong>Silhouettes:</strong> Figures seen at midnight; "blink and you miss it."</li>
+                    <li><strong>The Polaroid:</strong> Photographs of current rooms featuring non-existent objects.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
