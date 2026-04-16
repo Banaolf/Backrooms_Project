@@ -13,17 +13,38 @@
     <div class="container">
         <aside class="sidebar">
             <div class="logo">BACKROOMS<span>PROJECT</span></div>
+            
             <nav>
-                <ul>
-                    <li><a href="#" onclick="showSection('overview')">Overview</a></li>
-                    <li><a href="#" onclick="showSection('mechanics')">Math & Mechanics</a></li>
-                    <li><a href="#" onclick="showSection('levels')">The Levels</a></li>
-                    <li><a href="#" onclick="showSection('frontrooms')">Frontrooms Signs</a></li>
-                </ul>
+                <header>
+                    <ul>
+                        <li><a href="#" onclick="showSection('overview')">Overview</a></li>
+                        <li><a href="#" onclick="showSection('mechanics')">Math & Mechanics</a></li>
+                        <li><a href="#" onclick="showSection('levels')">The Levels</a></li>
+                        <li><a href="#" onclick="showSection('frontrooms')">Frontrooms Signs</a></li>
+                        <li><a href="#" onclick="showSection('factions')">Religions</a></li>
+                        <li><a href="#" onclick="showSection('entities')">Entities</a></li>
+                    </ul>
+                </header>
+
+                <footer>
+                    <ul>
+                        <li><a href="#" onclick="showSection('configs')">Configurations</a></li>
+                    </ul>
+                </footer>
             </nav>
         </aside>
 
         <main class="content">
+            <section id="configs" class="wiki-section">
+                <h1>Configs</h1>
+                <div class="checkboxContainer">
+                    <div class="checkbox">
+                        <input type="checkbox" onclick="toggleTheme()">
+                        <p>Theme</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="overview" class="wiki-section">
                 <h1>Entity Nature: The Expansion</h1>
                 <p class="status-tag">Status: Classified</p>
@@ -53,29 +74,57 @@
                     <p>Shortly after that, they begin to dislike light and all sounds that aren't their own footsteps.</p>
                     <p>Finally, the person completes their absorption with either:</p>
                     <ul>
-                        <p>Becoming a dark blob roaming around level C.</p>
+                        <p>Becoming a dark blob roaming.</p>
                         <p>Becoming another silhouette in the frontrooms.</p>
                     </ul>
                     <h4>Can I save people in the process of absorption?</h4>
                     <p>Short answer: <strong>Yes,</strong> but its really hard.</p>
-                    <p>To save someone from absorption, you'd need to put them in a really well-lit room, where stability is over ~78, give them almond water for around 50 Licles straight.</p>
+                    <p>To save someone from absorption, you'd need to put them in a really well-lit room, where luminosity > 80, give them almond water for around 50 Licles straight.</p>
                 </div>
             </section>
 
             <section id="levels" class="wiki-section" style="display:none;">
                 <h1>Catalogued Levels</h1>
                 <div class="card">
-                    <h3>Level 0.5: The Gilded Atrium</h3>
+                    <h3>Level 1: The Gilded Atrium</h3>
+                    <p><strong>Luminosity:</strong> Depending on the place. From 0-100</p>
+                    <p><strong>Class: </strong>Safe</p>
                     <p>An infinite play-place. Plastic tubes and primary colors. No floor—only mesh netting. Falling results in noclipping to deeper layers.</p>
+                    <p><strong>Risk: </strong>Near none. Reaching SLL.</p>
                 </div>
-                <div class="card" style="margin-top: 20px; border-color: #c0392b;">
+                <div class="card">
+                    <h3>Level -1: The Tarnish Atrium</h3>
+                    <p><strong>Luminosity: </strong> Depending on the Licst. Usually around 13 - 21</p>
+                    <p><strong>Class: </strong>Deadly</p>
+                    <p>A place haunted by the screams of falling people, chaos, and lack of places to step to.</p>
+                    <p><strong>Risk:</strong> Falling, getting consumed by an entity from a slide, absorption.</p>
+                </div>
+                <div class="card" style="margin-top: 20px;">
                     <h3>Level C: The Anonymous Cemetery</h3>
                     <p><strong>Luminosity:</strong> Perpetual Maximum (Static Day)</p>
+                    <p><strong>Class: </strong>Actionary</p>
                     <p>A silent field watched by the Groundskeeper. Contains millions of identical graves.</p>
                     <blockquote style="font-style: italic; color: #aaa;">
                         "Backrooms explorer, only recognised by god"
                     </blockquote>
-                    <p><strong>Risk:</strong> Approaching graves may result in a "Hard Reset" to Level 0.5 or immediate Absorption.</p>
+                    <p><strong>Risk:</strong> Approaching graves may result in a "Hard Reset" to Level 1 or immediate Absorption.</p>
+                </div>
+                <div class="card">
+                    <h3>Level 0x74B1B1: Machine Code</h3>
+                    <p><strong>Luminosity: </strong> unknown</p>
+                    <p><strong>Class: </strong>Unknown</p>
+                    <p>Where the seven explorers met their fate. Or exited. We don't Know.</p>
+                    <p><strong>Risk:</strong> Unknown</p>
+                </div>
+            </section>
+
+            <section id="entities" class="wiki-section" style="display:none;">
+                <div class="card" style="border-right: 4px solid #8e44ad;">
+                    <h3>Entity: The Hand (Subject P-1)</h3>
+                    <p><strong>Primary Location:</strong> Level -1 (Slides/Tubes)</p>
+                    <p><strong>Behavior:</strong> Predatory. Extends from slide openings to grab mobile mass. Process takes approximately 20 seconds.</p>
+                    <p><strong>Output:</strong> Bio-waste (Bones) are ejected post-consumption.</p>
+                    <p><em>"Don't look into the tubes. If you see purple, it's already too late."</em></p>
                 </div>
             </section>
 
@@ -84,9 +133,26 @@
                 <p>The entity leaves "markers" or "lures" to attract potential mass.</p>
                 <ul>
                     <li><strong>The Slide:</strong> A closed slide appearing in domestic basements.</li>
+                    <li><strong>The Door</strong> A door that tempts you to enter it. Dissapears behind you as soon as closed.</li>
                     <li><strong>Silhouettes:</strong> Figures seen at midnight; "blink and you miss it."</li>
                     <li><strong>The Polaroid:</strong> Photographs of current rooms featuring non-existent objects.</li>
                 </ul>
+            </section>
+
+            <section id="factions" class="wiki-section" style="display:none;">
+                <h1>Major Factions</h1>
+                
+                <div class="card korders">
+                    <h3>The Korders</h3>
+                    <p><strong>Motto:</strong> "Adapt or Die"</p>
+                    <p>The Korders believe the Frontrooms is unreachable. They focus on mastering the mechanics of the Backrooms to live indefinitely within the levels.</p>
+                </div>
+
+                <div class="card believers" style="margin-top: 20px;">
+                    <h3>The Believers</h3>
+                    <p><strong>Motto:</strong> "Pray and Advance"</p>
+                    <p>A faith-based group following the legend of the <strong>Seven Explorers</strong>. They believe divine intervention will eventually lead them to a true exit.</p>
+                </div>
             </section>
         </main>
     </div>
