@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logoBackrooms.jpg" type="image/jpg">
 </head>
 <body>
     <div class="container">
@@ -19,9 +20,10 @@
                     <ul>
                         <li><a href="#" onclick="showSection('overview')">Overview</a></li>
                         <li><a href="#" onclick="showSection('mechanics')">Math & Mechanics</a></li>
-                        <li><a href="#" onclick="showSection('levels')">The Levels</a></li>
                         <li><a href="#" onclick="showSection('frontrooms')">Frontrooms Signs</a></li>
                         <li><a href="#" onclick="showSection('factions')">Religions</a></li>
+                        <li><a href="#" onclick="showSection('pra-files')">PRA</a></li>
+                        <li><a href="#" onclick="showSection('levels')">The Levels</a></li>
                         <li><a href="#" onclick="showSection('entities')">Entities</a></li>
                     </ul>
                 </header>
@@ -35,13 +37,29 @@
         </aside>
 
         <main class="content">
-            <section id="configs" class="wiki-section">
+            <section id="configs" class="wiki-section" style="display: none;">
                 <h1>Configs</h1>
-                <div class="checkboxContainer">
+                <div id="start-checked" class="checkboxContainer">
                     <div class="checkbox">
                         <input type="checkbox" onclick="toggleTheme()">
                         <p>Dark Theme</p>
                     </div>
+                </div>
+            </section>
+
+            <section id="pra-files" class="wiki-section" style="display:none;">
+                <div class="pra-header">
+                    <img src="images/Pra.png" alt="PRA Logo" style="width: 80px; float: right;">
+                    <h1>PRA Asset Management</h1>
+                    <p><strong>For internal and report use only. Use outside PRA is strictly prohibited.</strong></p>
+                </div>
+
+                <div class="card" style="border-top: 5px solid #4db11f;">
+                    <h3>Expedition (The Complex)</h3>
+                    <p><strong>Status:</strong> Succesful</p>
+                    <p><strong>Utility:</strong> Map the east of the site</p>
+                    <p><strong>Note:</strong> Possible new site.</p>
+                    <p><strong>Result:</strong> 6 returned. ~1.6 kilometers mapped.</p>
                 </div>
             </section>
 
@@ -85,36 +103,72 @@
 
             <section id="levels" class="wiki-section" style="display:none;">
                 <h1>Catalogued Levels</h1>
-                <div class="card">
-                    <h3>Level 1: The Gilded Atrium</h3>
-                    <p><strong>Luminosity:</strong> Depending on the place. From 0-100</p>
-                    <p><strong>Class: </strong>Safe</p>
-                    <p>An infinite play-place. Plastic tubes and primary colors. No floor—only mesh netting. Falling results in noclipping to deeper layers.</p>
-                    <p><strong>Risk: </strong>Near none. Reaching SLL.</p>
+                <div class="card level-zero" style="border-left: 5px solid var(--text-muted); margin-bottom: var(--space-md);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="margin: 0;">Level 0: The Endless Walls</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Luminosity:</strong> 85 (Static)</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #27ae60;"><strong>Stability:</strong> 94%</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #27ae60;"><strong>Risk:</strong> Minimal</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #27ae60;"><strong>Class:</strong> Safe</div>
+                    </div>
+                    <p>Seemingly endless office spaces, walls and warm lights.</p>
                 </div>
-                <div class="card">
-                    <h3>Level -1: The Tarnish Atrium</h3>
-                    <p><strong>Luminosity: </strong> Depending on the Licst. Usually around 13 - 21</p>
-                    <p><strong>Class: </strong>Deadly</p>
-                    <p>A place haunted by the screams of falling people, chaos, and lack of places to step to.</p>
-                    <p><strong>Risk:</strong> Falling, getting consumed by an entity from a slide, absorption.</p>
+
+                <div class="card level-one" style="border-left: 5px solid #27ae60; margin-bottom: var(--space-md);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="margin: 0;">Level 1: The Gilded Atrium</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Luminosity:</strong> Variable (0-100)</div>
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Stability:</strong> Fluctuating</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #27ae60;"><strong>Risk:</strong> Near None / SLL</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #27ae60;"><strong>Class:</strong> Safe</div>
+                    </div>
+                    <p>Infinite play-place. Plastic tubes and primary colors. No floor—only mesh netting. Falling results in noclipping to deeper layers.</p>
                 </div>
-                <div class="card" style="margin-top: 20px;">
-                    <h3>Level C: The Anonymous Cemetery</h3>
-                    <p><strong>Luminosity:</strong> Perpetual Maximum (Static Day)</p>
-                    <p><strong>Class: </strong>Actionary</p>
+
+                <div class="card level-minus-one" style="border-left: 5px solid #c0392b; margin-bottom: var(--space-md);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="margin: 0;">Level -1: The Tarnish Atrium</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Luminosity:</strong> 13 - 21 (Licst)</div>
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Stability:</strong> Critical</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #c0392b;"><strong>Risk:</strong> Consumption / Fall</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #c0392b;"><strong>Class:</strong> Deadly</div>
+                    </div>
+                    <p>A place haunted by the screams of falling people, chaos, and lack of places to step to. Home of the Purple Hand.</p>
+                </div>
+
+                <div class="card level-c" style="border-left: 5px solid #f1c40f; margin-bottom: var(--space-md);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="margin: 0;">Level C: The Anonymous Cemetery</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Luminosity:</strong> Max (Static Day)</div>
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Stability:</strong> Locked</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #f1c40f;"><strong>Risk:</strong> Absorption / Reset</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #f1c40f;"><strong>Class:</strong> Actionary</div>
+                    </div>
                     <p>A silent field watched by the Groundskeeper. Contains millions of identical graves.</p>
-                    <blockquote style="font-style: italic; color: #aaa;">
+                    <blockquote style="font-style: italic; color: #aaa; border-left: 2px solid #555; padding-left: 10px; margin-top: 10px;">
                         "Backrooms explorer, only recognised by god"
                     </blockquote>
-                    <p><strong>Risk:</strong> Approaching graves may result in a "Hard Reset" to Level 1 or immediate Absorption.</p>
                 </div>
-                <div class="card">
-                    <h3>Level 0x74B1B1: Machine Code</h3>
-                    <p><strong>Luminosity: </strong> unknown</p>
-                    <p><strong>Class: </strong>Unknown</p>
-                    <p>Where the seven explorers met their fate. Or exited. We don't Know.</p>
-                    <p><strong>Risk:</strong> Unknown</p>
+
+                <div class="card level-machine" style="border-left: 5px solid #8e44ad; margin-bottom: var(--space-md);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="margin: 0;">Level 0x74B1B1: Machine Code</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Luminosity:</strong> Unknown</div>
+                        <div class="note" style="margin: 0; padding: 10px;"><strong>Stability:</strong> Unknown</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #333;"><strong>Risk:</strong> Unknown</div>
+                        <div class="note" style="margin: 0; padding: 10px; border-color: #333;"><strong>Class:</strong> Unknown</div>
+                    </div>
+                    <p>Where the seven explorers met their fate. Or exited. The boundary where the Backrooms' logic breaks down.</p>
                 </div>
             </section>
 

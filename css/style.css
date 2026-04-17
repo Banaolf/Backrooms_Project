@@ -94,6 +94,24 @@ nav a:hover {
     overflow-y: auto;
 }
 
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 rows of 3 = 6 members */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.member-slot {
+    border: 1px solid var(--border);
+    padding: 5px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.member-active { background: #27ae60; color: white; }
+.member-absorbed { background: #c0392b; color: white; }
+
 h1 {
     font-family: var(--font-mono);
     color: var(--accent);

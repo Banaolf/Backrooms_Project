@@ -1,3 +1,5 @@
+const c = document.getElementById("start-checked");
+c.checked = false;
 function showSection(sectionId) {
     // Hide all sections
     const sections = document.querySelectorAll('.wiki-section');
@@ -40,7 +42,7 @@ const dark = {
     "--border": "#333333",
     "--border-checkbox": "#333333a8"
 }
-let isDarkMode = false;
+let isDarkMode = true;
 
 function toggleTheme() {
     isDarkMode = !isDarkMode;
@@ -51,3 +53,4 @@ function toggleTheme() {
         document.documentElement.style.setProperty(property, value);
     });
 }
+toggleTheme();
