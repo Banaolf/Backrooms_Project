@@ -37,9 +37,41 @@ body {
     height: 100vh;
 }
 
+/* Update the container for better mobile/TV support */
 .container {
+    display: -webkit-box; /* Support for older WebKit (Safari/TVs) */
+    display: -ms-flexbox;  /* Support for IE10/Edge Legacy */
     display: flex;
     width: 100%;
+    flex-direction: row;
+}
+
+/* Responsive fix for phones and tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+/* TV Optimization: Ensure text remains readable at distance */
+@media (min-width: 2000px) {
+    body { font-size: 1.5rem; }
+    .sidebar { width: 350px; }
+}
+
+/* Vendor Prefixes for the scrollbar (Chrome/Safari/Edge) */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
 }
 
 .sidebar {
