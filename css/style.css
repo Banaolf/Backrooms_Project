@@ -37,7 +37,6 @@ body {
     height: 100vh;
 }
 
-/* Update the container for better mobile/TV support */
 .container {
     display: -webkit-box; /* Support for older WebKit (Safari/TVs) */
     display: -ms-flexbox;  /* Support for IE10/Edge Legacy */
@@ -121,9 +120,21 @@ nav a:hover {
 }
 
 .content {
-    flex-grow: 1;
-    padding: var(--space-lg);
-    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wiki-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.wiki-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .team-grid {

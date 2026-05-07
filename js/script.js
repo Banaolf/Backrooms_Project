@@ -30,14 +30,27 @@ const dark = {
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.wiki-section');
+    
     sections.forEach(section => {
+        // Remove active class and hide
+        section.classList.remove('active');
         section.style.display = 'none';
     });
 
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.style.display = 'block';
+        
+        setTimeout(() => {
+            targetSection.classList.add('active');
+        }, 10);
+
         localStorage.setItem('lastViewedTab', sectionId);
+        
+        document.querySelector('.content').scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 }
 
